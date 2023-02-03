@@ -2,31 +2,31 @@ Builds
 cmake-build-debug
 .idea/
 # VS files
-/WavetableSynth_SharedCode.vcxproj
-/WavetableSynth_StandalonePlugin.vcxproj.filters
-/WavetableSynth_StandalonePlugin.vcxproj.user
-/WavetableSynth_VST3.vcxproj.filters
-/WavetableSynth_VST3.vcxproj
+/GranularFlowWavetableSynth_SharedCode.vcxproj
+/GranularFlowWavetableSynth_StandalonePlugin.vcxproj.filters
+/GranularFlowWavetableSynth_StandalonePlugin.vcxproj.user
+/GranularFlowWavetableSynth_VST3.vcxproj.filters
+/GranularFlowWavetableSynth_VST3.vcxproj
 /resources.rc
-/WavetableSynth_StandalonePlugin.vcxproj
-/WavetableSynth_SharedCode.vcxproj.filters
+/GranularFlowWavetableSynth_StandalonePlugin.vcxproj
+/GranularFlowWavetableSynth_SharedCode.vcxproj.filters
 /x64/Debug/Shared Code/
-/x64/Debug/Standalone Plugin/WavetableSynth.exe.recipe
+/x64/Debug/Standalone Plugin/GranularFlowWavetableSynth.exe.recipe
 /x64/Debug/Standalone Plugin/*.tlog
-/x64/Debug/Standalone Plugin/WavetableSynth.ilk
-/x64/Debug/Standalone Plugin/WavetableSynth.pdb
-/x64/Debug/Standalone Plugin/WavetableSynth_StandalonePlugin.vcxproj.FileListAbsolute.txt
+/x64/Debug/Standalone Plugin/GranularFlowWavetableSynth.ilk
+/x64/Debug/Standalone Plugin/GranularFlowWavetableSynth.pdb
+/x64/Debug/Standalone Plugin/GranularFlowWavetableSynth_StandalonePlugin.vcxproj.FileListAbsolute.txt
 /x64/Debug/Standalone Plugin/include_juce_audio_plugin_client_Standalone.obj
 /x64/Debug/Standalone Plugin/resources.res
 /.vs/
 /x64/Debug/VST3/*.tlog/
-/x64/Debug/VST3/WavetableSynth.exp
-/x64/Debug/VST3/WavetableSynth.lib
-/x64/Debug/VST3/WavetableSynth.pdb
-/x64/Debug/VST3/WavetableSynth.vst3.recipe
-/x64/Debug/VST3/WavetableSynth_VST3.log
-/x64/Debug/VST3/WavetableSynth.ilk
-/x64/Debug/VST3/WavetableSynth_VST3.vcxproj.FileListAbsolute.txt
+/x64/Debug/VST3/GranularFlowWavetableSynth.exp
+/x64/Debug/VST3/GranularFlowWavetableSynth.lib
+/x64/Debug/VST3/GranularFlowWavetableSynth.pdb
+/x64/Debug/VST3/GranularFlowWavetableSynth.vst3.recipe
+/x64/Debug/VST3/GranularFlowWavetableSynth_VST3.log
+/x64/Debug/VST3/GranularFlowWavetableSynth.ilk
+/x64/Debug/VST3/GranularFlowWavetableSynth_VST3.vcxproj.FileListAbsolute.txt
 /x64/Debug/VST3/include_juce_audio_plugin_client_VST3.obj
 /x64/Debug/VST3/resources.res
 /JuceLibraryCode/
