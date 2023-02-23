@@ -10,7 +10,7 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "../Constants.h"
+#include "Constants.h"
 
 
 class Utils
@@ -18,12 +18,17 @@ class Utils
 public:
 	Utils();
 	~Utils();
+    // GUI
+    static void paintLogo(Graphics&);
+    static void addToFb(FlexBox* fb, Component& c, int8 order, int minWidth, int minHeight);
+
+    // Tools
     static float percentToFloat(int8);
     static float samplesToPercent(int,int);
     static int msToSamples(float, int);
     static float samplesToMs(int, int);
     static int secToSamples(float, int);
-    static void addToFb(FlexBox* fb, Component& c, int8 order, int minWidth, int minHeight);
+
 
 private:
 

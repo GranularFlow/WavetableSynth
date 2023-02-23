@@ -9,7 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "WavetableSynth/WavetableSynth.h"
+#include "Synths/WavetableSynth/WavetableSynth.h"
 
 //==============================================================================
 /**

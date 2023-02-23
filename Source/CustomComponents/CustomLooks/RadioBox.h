@@ -10,26 +10,28 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "../Constants.h"
+#include "../../Utils/Constants.h"
 #include "CustomLook.h"
 
-class Knob : public Component, public Slider::Listener
+class RadioBox : public Component, public ToggleButton::Listener
 {
 public:
     // Class
-    Knob(String, Colour, float, float, float, float);
-    ~Knob();
+	RadioBox(String, Colour, Array<String>);
+    ~RadioBox();
     // GUI
     void paint(Graphics&) override;
-    void resized() override;
-    void sliderValueChanged(Slider*) override;
+    void resized();
+    // Listeners
+    void buttonStateChanged(Button*) override;
+    void buttonClicked(Button*) override;
     // Getters
-    float getValue();
-    // Public vars
-    Slider slider { Slider::SliderStyle::RotaryHorizontalDrag, Slider::TextEntryBoxPosition::NoTextBox };
+    int8 getValue();
+
 private:
     CustomLook customLook;
     String name;
     Colour guiColor;
-    float value = 0;
+    OwnedArray<ToggleButton> toggleButtons;
+    int8 value = 0;
 };

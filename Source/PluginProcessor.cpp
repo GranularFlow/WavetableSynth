@@ -28,6 +28,14 @@ GranularFlowWavetableAudioProcessor::~GranularFlowWavetableAudioProcessor()
 {
 }
 
+void GranularFlowWavetableAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
+{
+    // Use this method as the place to do any pre-playback
+    // initialisation that you need..
+    wavetableSynth.prepareToPlay(sampleRate);
+}
+
+
 void GranularFlowWavetableAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     buffer.clear();
@@ -35,11 +43,6 @@ void GranularFlowWavetableAudioProcessor::processBlock(juce::AudioBuffer<float>&
 }
 
 
-void GranularFlowWavetableAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
-{
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
-}
 
 
 

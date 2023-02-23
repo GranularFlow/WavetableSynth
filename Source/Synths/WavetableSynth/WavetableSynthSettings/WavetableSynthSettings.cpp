@@ -19,6 +19,12 @@ WavetableSynthSettings::WavetableSynthSettings()
     addAndMakeVisible(volumeKnob);
     addAndMakeVisible(interpolationRadioBox);
     addAndMakeVisible(panKnob);
+
+    for (int i = 0; i < 5; i++)
+    {
+        separators.add(new Separator());
+        addAndMakeVisible(separators.getLast());
+    }
 }
 
 WavetableSynthSettings::~WavetableSynthSettings()
@@ -45,20 +51,21 @@ void WavetableSynthSettings::resized()
     };
 
     // Second column
-    int tmp_height = sectionHeight;
-    int tmp_width = 100;
-    fb.items.add(FlexItem(midiModeRadioBox).withOrder(1).withMinWidth(tmp_width).withMinHeight(tmp_height));
-    fb.items.add(FlexItem(freqKnob).withOrder(3).withMinWidth(tmp_width).withMinHeight(tmp_height));
-    fb.items.add(FlexItem(waveCountKnob).withOrder(5).withMinWidth(tmp_width).withMinHeight(tmp_height));
-    fb.items.add(FlexItem(interpolationRadioBox).withOrder(5).withMinWidth(tmp_width).withMinHeight(tmp_height));
-    fb.items.add(FlexItem(volumeKnob).withOrder(9).withMinWidth(tmp_width).withHeight(tmp_height));
-    fb.items.add(FlexItem(panKnob).withOrder(11).withMinWidth(tmp_width).withHeight(tmp_height));
+    int tmpheight = sectionHeight;
+    int tmpWidth = 100;
+    // addToFb(FlexBox* fb, Component& c, int8 order, int minWidth, int minHeight);
+    Utils::addToFb(&fb, midiModeRadioBox, 1, tmpWidth, tmpheight);
+    Utils::addToFb(&fb, freqKnob, 3, tmpWidth, tmpheight);
+    Utils::addToFb(&fb, waveCountKnob, 5, tmpWidth, tmpheight);
+    Utils::addToFb(&fb, interpolationRadioBox, 7, tmpWidth, tmpheight);
+    Utils::addToFb(&fb, volumeKnob, 9, tmpWidth, tmpheight);
+    Utils::addToFb(&fb, panKnob, 11, tmpWidth, tmpheight);
 
 
     // White lines
-    for (int8 i = 0; i < 6; i++)
+    for (int i = 0; i < separators.size(); i++)
     {
-        fb.items.add(FlexItem(*separators[i]).withMinWidth(1).withHeight(sectionHeight).withOrder((i + 1) * 2));
+        Utils::addToFb(&fb, *separators[i], (i + 1) * 2, 1, tmpheight);        
     }
 
     fb.performLayout(getLocalBounds());
@@ -73,7 +80,7 @@ float WavetableSynthSettings::getFreq()
 
 float WavetableSynthSettings::getWaveCount()
 {
-    return 0.0f;
+    return waveCountKnob.getValue();
 }
 
 float WavetableSynthSettings::getVolume()

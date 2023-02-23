@@ -5,53 +5,61 @@
               pluginCharacteristicsValue="pluginWantsMidiIn">
   <MAINGROUP id="eMEK6W" name="GranularFlowWavetableSynth">
     <GROUP id="{5C57CFC1-3B34-C05E-378A-64861F64A9A2}" name="Source">
-      <GROUP id="{3F8DBDDA-02BC-7A77-DE4A-A80E56D5F4BE}" name="CustomSetting">
-        <FILE id="RLKhko" name="CustomLook.cpp" compile="1" resource="0" file="Source/CustomSetting/CustomLook.cpp"/>
-        <FILE id="tjLvW0" name="CustomLook.h" compile="0" resource="0" file="Source/CustomSetting/CustomLook.h"/>
-        <FILE id="X3vgLd" name="DropDownSelect.cpp" compile="1" resource="0"
-              file="Source/CustomSetting/DropDownSelect.cpp"/>
-        <FILE id="vigad6" name="DropDownSelect.h" compile="0" resource="0"
-              file="Source/CustomSetting/DropDownSelect.h"/>
-        <FILE id="mrWHxo" name="Knob.cpp" compile="1" resource="0" file="Source/CustomSetting/Knob.cpp"/>
-        <FILE id="Xpvi42" name="Knob.h" compile="0" resource="0" file="Source/CustomSetting/Knob.h"/>
-        <FILE id="As2HaX" name="NumberSelect.cpp" compile="1" resource="0"
-              file="Source/CustomSetting/NumberSelect.cpp"/>
-        <FILE id="ffYwoj" name="NumberSelect.h" compile="0" resource="0" file="Source/CustomSetting/NumberSelect.h"/>
-        <FILE id="Aq9OV1" name="RadioBox.cpp" compile="1" resource="0" file="Source/CustomSetting/RadioBox.cpp"/>
-        <FILE id="PGJBr7" name="RadioBox.h" compile="0" resource="0" file="Source/CustomSetting/RadioBox.h"/>
-        <FILE id="MBcYxy" name="Separator.h" compile="0" resource="0" file="Source/CustomSetting/Separator.h"/>
-      </GROUP>
-      <GROUP id="{B631DC7C-8108-D4BE-3712-DB70CBAFBC36}" name="WavetableSynth">
-        <GROUP id="{FBFCAC27-780E-D6BD-9376-14E8DD4AA139}" name="Canvas">
-          <FILE id="CP2zz5" name="Canvas.cpp" compile="1" resource="0" file="Source/WavetableSynth/Canvas/Canvas.cpp"/>
-          <FILE id="tR9Ka7" name="Canvas.h" compile="0" resource="0" file="Source/WavetableSynth/Canvas/Canvas.h"/>
+      <GROUP id="{EA89F6E3-58FC-CE35-08AA-6741F6FB2453}" name="CustomComponents">
+        <GROUP id="{B9BB210F-6B6E-4AA7-6993-81576E7B5404}" name="CustomLooks">
+          <FILE id="QLp8lt" name="CustomLook.cpp" compile="1" resource="0" file="Source/CustomComponents/CustomLooks/CustomLook.cpp"/>
+          <FILE id="PwM702" name="CustomLook.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/CustomLook.h"/>
+          <FILE id="TaI1ql" name="Knob.cpp" compile="1" resource="0" file="Source/CustomComponents/CustomLooks/Knob.cpp"/>
+          <FILE id="AusvWk" name="Knob.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/Knob.h"/>
+          <FILE id="eApbrD" name="NumberSelect.cpp" compile="1" resource="0"
+                file="Source/CustomComponents/CustomLooks/NumberSelect.cpp"/>
+          <FILE id="tMdXix" name="NumberSelect.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/NumberSelect.h"/>
+          <FILE id="ny57bG" name="RadioBox.cpp" compile="1" resource="0" file="Source/CustomComponents/CustomLooks/RadioBox.cpp"/>
+          <FILE id="KEP69B" name="RadioBox.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/RadioBox.h"/>
+          <FILE id="PHutop" name="Separator.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/Separator.h"/>
         </GROUP>
-        <GROUP id="{8918204A-660D-7210-400E-673E44CEAC2E}" name="WavetableSynthSettings">
-          <FILE id="ee6xRy" name="WavetableSynthSettings.cpp" compile="1" resource="0"
-                file="Source/WavetableSynth/WavetableSynthSettings/WavetableSynthSettings.cpp"/>
-          <FILE id="EQLFcX" name="WavetableSynthSettings.h" compile="0" resource="0"
-                file="Source/WavetableSynth/WavetableSynthSettings/WavetableSynthSettings.h"/>
+        <GROUP id="{2F0902AA-E579-EF87-340B-2047038C8A83}" name="Images">
+          <FILE id="sfHTLZ" name="logo250.png" compile="0" resource="1" file="Source/CustomComponents/Images/logo250.png"/>
         </GROUP>
-        <FILE id="gHIh03" name="WavetableSynth.cpp" compile="1" resource="0"
-              file="Source/WavetableSynth/WavetableSynth.cpp"/>
-        <FILE id="cPsn7B" name="WavetableSynth.h" compile="0" resource="0"
-              file="Source/WavetableSynth/WavetableSynth.h"/>
       </GROUP>
-      <GROUP id="{7E5F14D6-AEF4-9988-CA15-5565424CF35D}" name="images">
-        <FILE id="EbwKT3" name="logo250.png" compile="0" resource="1" file="Source/images/logo250.png"/>
+      <GROUP id="{6292CF62-7800-A027-28C3-17641FE34881}" name="Synths">
+        <GROUP id="{91B94CA2-0ACA-55B5-BAA2-080D529AE865}" name="WavetableSynth">
+          <GROUP id="{6A8E8D48-D16F-7007-20DB-6EBA4C34ED09}" name="Canvas">
+            <FILE id="kTpwJ9" name="Canvas.cpp" compile="1" resource="0" file="Source/Synths/WavetableSynth/Canvas/Canvas.cpp"/>
+            <FILE id="seBTH3" name="Canvas.h" compile="0" resource="0" file="Source/Synths/WavetableSynth/Canvas/Canvas.h"/>
+          </GROUP>
+          <GROUP id="{757EB145-749E-7955-D616-75D83FE3B74C}" name="Visualiser">
+            <FILE id="IgOBru" name="Visualiser.cpp" compile="1" resource="0" file="Source/Synths/WavetableSynth/Visualiser/Visualiser.cpp"/>
+            <FILE id="Cj8Yqw" name="Visualiser.h" compile="0" resource="0" file="Source/Synths/WavetableSynth/Visualiser/Visualiser.h"/>
+          </GROUP>
+          <GROUP id="{14BF39F8-1FB5-8C82-73C5-AA7C03B98E41}" name="WavetableSynthSettings">
+            <FILE id="j27E3N" name="WavetableSynthSettings.cpp" compile="1" resource="0"
+                  file="Source/Synths/WavetableSynth/WavetableSynthSettings/WavetableSynthSettings.cpp"/>
+            <FILE id="A4yBKV" name="WavetableSynthSettings.h" compile="0" resource="0"
+                  file="Source/Synths/WavetableSynth/WavetableSynthSettings/WavetableSynthSettings.h"/>
+          </GROUP>
+          <FILE id="C8mz27" name="WavetableSynth.cpp" compile="1" resource="0"
+                file="Source/Synths/WavetableSynth/WavetableSynth.cpp"/>
+          <FILE id="MCOE3t" name="WavetableSynth.h" compile="0" resource="0"
+                file="Source/Synths/WavetableSynth/WavetableSynth.h"/>
+        </GROUP>
       </GROUP>
-      <GROUP id="{4E4597EF-E116-CDDA-69A9-93474EC947B8}" name="Utils">
-        <FILE id="HT4ZvD" name="Utils.cpp" compile="1" resource="0" file="Source/Utils/Utils.cpp"/>
-        <FILE id="VHzbWC" name="Utils.h" compile="0" resource="0" file="Source/Utils/Utils.h"/>
+      <GROUP id="{22ABA4BE-1D89-B316-C214-07D9CF2E537C}" name="Utils">
+        <GROUP id="{02FC2F54-B0E5-BAF1-FD93-EEB809776E2D}" name="AudioLoad">
+          <FILE id="QMlSa5" name="AudioLoad.cpp" compile="1" resource="0" file="Source/Utils/AudioLoad/AudioLoad.cpp"/>
+          <FILE id="z8Vf6K" name="AudioLoad.h" compile="0" resource="0" file="Source/Utils/AudioLoad/AudioLoad.h"/>
+        </GROUP>
+        <FILE id="CpS9JV" name="Constants.h" compile="0" resource="0" file="Source/Utils/Constants.h"/>
+        <FILE id="bjQVXr" name="Utils.cpp" compile="1" resource="0" file="Source/Utils/Utils.cpp"/>
+        <FILE id="biEjS7" name="Utils.h" compile="0" resource="0" file="Source/Utils/Utils.h"/>
       </GROUP>
-      <FILE id="PEZIF6" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
-      <FILE id="wCTSUR" name="PluginProcessor.cpp" compile="1" resource="0"
-            file="Source/PluginProcessor.cpp"/>
-      <FILE id="Ffy8l9" name="PluginProcessor.h" compile="0" resource="0"
-            file="Source/PluginProcessor.h"/>
-      <FILE id="UcG700" name="PluginEditor.cpp" compile="1" resource="0"
+      <FILE id="WVtGtK" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
-      <FILE id="RfKcEB" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="Vl0yzt" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="grQAlU" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="tq4GQP" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

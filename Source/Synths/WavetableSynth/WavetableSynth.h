@@ -10,41 +10,51 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "../Constants.h"
+#include "../../Utils/Constants.h"
+#include "../../Utils/Utils.h"
 #include "WavetableSynthSettings/WavetableSynthSettings.h"
 #include "Canvas/Canvas.h"
-class WavetableSynth : public Component
+#include "Visualiser/Visualiser.h"
+
+class WavetableSynth : public Component, public Button::Listener, public Slider::Listener
 {
 public:
     // Class
 	WavetableSynth();
 	~WavetableSynth();
-    // GUI
-    void paint(Graphics&) override;
-    void paintLogoOnce(Graphics&);
-    void resized()override;
 
-    /*
+
     // Listeners
-    void sliderValueChanged(Slider*) override;
     void addListeners();
     void removeListeners();
-    // Process
-    void prepareToPlay(double, int);
-    void getNextBlock(AudioBuffer<float>&, juce::MidiBuffer&);
-    */
+    void sliderValueChanged(Slider*) override;
+    void buttonClicked(Button*) override;
+
+    // GUI
+    void paint(Graphics&) override;
+    void resized()override;
+    
+    // Tools
     void initSamples();
-    void interpolate();
-    void interpolateLinear();
+    void prepareToPlay(double);
     void getNextBlock(AudioBuffer<float>& ,MidiBuffer& midiMessages);
+    float interpolate(float x, float x1, float x2, float y1, float y2);
+    float cubicInterpolate(float);
+    double interpolateHermite(double);
+
     void handleMidi(MidiBuffer&);
 private:
-    Canvas canvas1;
-    Canvas canvas2;
-    Canvas canvas3;
+    TextButton combineButton{ "SYNTHESIZE" };
+    Canvas canvas1 { "FIRST WAVE" };
+    Canvas canvas2 { "SECOND WAVE" };
+    Canvas canvas3 { "THIRD WAVE" };
+    Visualiser canvas4;
     WavetableSynthSettings wavetableSettings;
     Array<float> sampleY;
     Array<float> sampleX;
+
+    float frequency = 440;
+    float sampleRate = 48000;
 
     bool midiNoteOn = false;
     int lastMidiNote = -1;

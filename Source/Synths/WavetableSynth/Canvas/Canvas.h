@@ -10,12 +10,12 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "../../Constants.h"
+#include "../../../Utils/Constants.h"
 class Canvas : public Component
 {
 public:  
     // Class
-    Canvas();
+    Canvas(String);
     ~Canvas();
 
     // GUI
@@ -33,8 +33,7 @@ public:
 
     // Conversion
     void convertPointsToAmplitude();
-    float yValueToAmplitude(float );
-
+    float yValueToAmplitude(float);
 
     Array<float> xPos;
     Array<float> yPos;
@@ -43,7 +42,8 @@ public:
 
     int waveTableIndex = 0;
     const int waveTableSampleCount = 100;
-    float sampleDistance = 3;
+    float sampleDistance = 2.5; // 250 / 100 samples
+    String text;
 private:
 
 };

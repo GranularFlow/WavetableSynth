@@ -10,8 +10,9 @@
 
 #include "Canvas.h"
 
-Canvas::Canvas()
+Canvas::Canvas(String textIn)
 {
+    text = textIn;
 }
 
 Canvas::~Canvas()
@@ -27,14 +28,23 @@ void Canvas::paintPath(Graphics& g)
     {
         path.lineTo(xPos[i], yPos[i]);
     }
-    g.setColour(Colours::white);
+    g.setColour(C_WHITE);
     g.strokePath(path, PathStrokeType(2.0f, PathStrokeType::JointStyle::curved, PathStrokeType::rounded));
 }
 
 void Canvas::paint(Graphics& g)
 {
     g.fillAll(L_GRAY);
+
+    g.setColour(C_WHITE);
+    g.drawText(text, getLocalBounds(), Justification::centredTop);
+
     paintPath(g);
+
+    g.setColour(M_DARK);
+    g.drawRect(getWidth()/2, 10, 1, getHeight());
+    g.drawRect(0, getHeight()/2, getWidth(), 1);
+
 }
 
 void Canvas::mouseDrag(const MouseEvent& e)
@@ -126,7 +136,7 @@ void Canvas::addPoint(float newX, float newY)
     // Finally add values after filtering
     //DBG("ADDED x: " << newX << " y: " << newY);
     xPos.add(newX);
-    yPos.add(newY);
+    yPos.add(newY);   
 
     // Skip repainting if there are less than 2 points.
     if (xPos.size() >= 2) {
@@ -153,6 +163,7 @@ float Canvas::interpolateY(float x, float x1, float y1, float x2, float y2)
 
 void Canvas::mouseUp(const MouseEvent& e)
 {
+    
     // Interpolate wavetable
     if (xPos.size() != waveTableSampleCount)
     {

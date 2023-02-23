@@ -10,7 +10,7 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "../Constants.h"
+#include "../../Utils/Constants.h"
 
 class Separator : public Component
 {

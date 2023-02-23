@@ -10,10 +10,11 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "../../Constants.h"
-#include "../../CustomSetting/RadioBox.h"
-#include "../../CustomSetting/Knob.h"
-#include "../../CustomSetting/Separator.h"
+#include "../../../Utils/Constants.h"
+#include "../../../Utils/Utils.h"
+#include "../../../CustomComponents/CustomLooks/RadioBox.h"
+#include "../../../CustomComponents/CustomLooks/Knob.h"
+#include "../../../CustomComponents/CustomLooks/Separator.h"
 
 class WavetableSynthSettings : public Component
 {
@@ -49,9 +50,10 @@ public:
     bool isCurrentInterpolationType(WavetableSynthSettings::InterpolationType);
 
     // Settings
+    // (String nameIn, Colour guiColorIn, float startRangIn, float endRangeIn, float stepIn, float defaultValue)
     RadioBox midiModeRadioBox{ "MIDI", C_SUNFLOWER, MIDI_MODE };
-    Knob freqKnob{ "FREQUENCY", C_SUNFLOWER, 1, 50, 1, 1 }; // %
-    Knob waveCountKnob{ "WAVE COUNT", C_SUNFLOWER, 2, 30, 2, 2 }; // %
+    Knob freqKnob{ "FREQUENCY", C_SUNFLOWER, 100, 1000, 1, 400 }; // %
+    Knob waveCountKnob{ "WAVE COUNT", C_SUNFLOWER, 2, 10, 2, 6 }; // %
     RadioBox interpolationRadioBox{ "ITERPOLATION", C_SUNFLOWER, INTERPOLATION_TYPE };
 
     // Master

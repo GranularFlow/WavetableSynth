@@ -34,7 +34,13 @@ const Array<String> GRANULAR_MODE = {"ORDER", "REV.ORDER", "MIRROR", "REV.MIRROR
 const Array<String> RUNNING_MODE = {"STATIC", "RUNNING"};
 const Array<String> MIDI_MODE = {"OFF", "ON"};
 const Array<String> WINDOW_TYPE = { "HALF SINE", "HANN", "TRIANGLE"};
-const Array<String> INTERPOLATION_TYPE = { "LINEAR", "CUBIC", "HEARMITE" };
+const Array<String> INTERPOLATION_TYPE = { "LINEAR", "CUBIC", "HERMITE" };
+const Array<String> DIRECTION_MODE = { "RANDOM", "FORWARD", "REVERSED" };
+const Array<String> SELECTED_COLOR = { "RED", "GREEN", "BLUE" };
+const Array<String> COORDINATE = { "X", "Y" };
+const Array<String> EQUATIONS = { "2pi", "triangle"};
+
+
 
 // ----------------------------
 // Colours for buttons and knobs
